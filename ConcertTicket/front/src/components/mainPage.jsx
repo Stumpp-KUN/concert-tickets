@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import ReactPlayer from 'react-player';
+import Head from './head';
+import '../css/mainPage.css';
 
 const MainPage = () =>{
     const [concert, setConcert] = useState([]);
@@ -13,7 +15,7 @@ const MainPage = () =>{
           timeoutId = setTimeout(() => {
             setShowVideo(true);
             setShowBanner(false);
-          }, 15000);
+          }, 15000000000000);
         
     
         return () => {
@@ -23,7 +25,9 @@ const MainPage = () =>{
 
     return(
         <div>
+          <Head/>
       <div className="bigBanner">
+
       {showVideo ? (
         <ReactPlayer
         url={'#'}
@@ -51,25 +55,18 @@ const MainPage = () =>{
   data-nimg="fill"
   className="big_banner_image"
   sizes="100vw"
-  srcSet={'#'}
-  src={'#'}
+  srcSet={'https://anitype.fun/_next/image?url=https%3A%2F%2Fanitype.site%2Fapp2%2Fmedia%2Fdownload%3FfileName%3Danime%2F48549.webp&w=1920&q=100'}
+  src={'https://anitype.fun/_next/image?url=https%3A%2F%2Fanitype.site%2Fapp2%2Fmedia%2Fdownload%3FfileName%3Danime%2F48549.webp&w=1920&q=100'}
   style={{ position: "absolute", height: "100%", width: "100%", inset: 0, color: "transparent" }}
 />
-          <div className="big_banner_image_gradient"></div>
           <div className="big_banner_text_container">
-            <div className="big_banner_text_header">text</div>
-            {/* <div className="catalog_info_rank_genres_container">
-              <div className="big_banner_genres">{popAnime.episodes} эпизодов · {popAnime.mangaName} · Комедия, Приключения, Сёнен, Фантастика</div>
+            <div className="big_banner_text_header">textConcert</div>
+            <div className="catalog_info_rank_genres_container">
+              <div className="big_banner_type">ConcertType</div>
             </div>
-            <div className="big_banner_text_description">{extAnime.description}</div> */}
+            <div className="big_banner_text_description">Info about concert fdsfsflmdsflsfklfdkslfslfslkflsfksldfskfldskfsl</div>
           </div>
         </div>
-
-        {/* <div className="big_banner_button_container">
-        <Link to={`/anime/${extAnime.id}`} className='animeTitle'>
-        <button class="button-1" role="button">Смотреть</button>
-        </Link>
-        </div> */}
         </div>
       )}
         

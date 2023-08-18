@@ -1,0 +1,49 @@
+html, body {
+    margin: 0;
+    padding: 0;
+  }
+
+
+.head{
+    
+    flex-direction: row;
+    display: flex;
+    position: relative;
+    height: 60px;
+    z-index: 9999;
+}
+
+.mainName{
+    font-size: 30px;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    font-weight: 500;
+}
+
+.rowChoise{
+    text-decoration: none;
+    padding-right: 50px;
+    font-size: 25px;
+    color: white;
+    font-weight: 500;
+    padding-top: 10px;
+}
+
+.rowChoise:hover{
+    color: blue;
+}
+
+.rowChoise_selected{
+    border-bottom: 2px solid var(--accent-color);
+    color: var(--link_active);
+    fill: var(--link_active);
+}
+
+.mainFun{
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+}
